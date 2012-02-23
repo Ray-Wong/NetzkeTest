@@ -1,0 +1,1692 @@
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (14.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (113.0ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (93.0ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateNetzkePreferences (20100905024938)
+  [4;36;1mSQL (49.0ms)[0m   [0;1mCREATE TABLE `netzke_preferences` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `pref_type` varchar(255), `value` text, `user_id` int(11), `role_id` int(11), `widget_name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100905024938')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `netzke_preferences`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mdescribe `netzke_preferences`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `netzke_preferences`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-04 23:05:07) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-09-05 18:25:07) [GET]
+Rendering template within layouts/application
+Rendering welcome/index
+Completed in 2151ms (View: 180, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#netzke to css (for 127.0.0.1 at 2010-09-05 18:25:10) [GET]
+Completed in 41ms (View: 1, DB: 0) | 200 OK [http://localhost/netzke/netzke.css]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#netzke to js (for 127.0.0.1 at 2010-09-05 18:25:11) [GET]
+Completed in 70ms (View: 1, DB: 0) | 200 OK [http://localhost/netzke/netzke.js]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (71.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateNetzkePreferences (20100905024938)
+Migrating to CreateTasks (20100906001238)
+  [4;36;1mSQL (909.1ms)[0m   [0;1mCREATE TABLE `tasks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `notes` text, `priority` int(11), `due` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100906001238')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `netzke_preferences`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mdescribe `netzke_preferences`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `netzke_preferences`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `tasks`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `tasks`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-09-05 21:16:29) [GET]
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mNetzkePreference Load (1.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks') [0m
+  [4;35;1mNetzkeFieldList Load (0.0ms)[0m   [0mMysql::Error: Table 'netzketest_development.netzke_field_lists' doesn't exist: SELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks') LIMIT 1[0m
+
+ActionView::TemplateError (Mysql::Error: Table 'netzketest_development.netzke_field_lists' doesn't exist: SELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks')  LIMIT 1) on line #1 of app/views/welcome/index.html.erb:
+1: <%= netzke :tasks, :class_name => "GridPanel", :model => "Task"  %>
+
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-basepack-0.5.13/lib/app/models/netzke_field_list.rb:201:in `pref_to_read'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-basepack-0.5.13/lib/app/models/netzke_field_list.rb:90:in `read_list'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-basepack-0.5.13/lib/netzke/grid_panel/grid_panel_columns.rb:119:in `load_columns'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-basepack-0.5.13/lib/netzke/grid_panel/grid_panel_columns.rb:56:in `columns'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-basepack-0.5.13/lib/netzke/grid_panel/grid_panel_columns.rb:218:in `default_fields_for_forms'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-basepack-0.5.13/lib/netzke/grid_panel.rb:303:in `initial_late_aggregatees'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:422:in `aggregatees'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:426:in `non_late_aggregatees'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:391:in `dependency_classes'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base_js.rb:67:in `js_missing_code'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/action_view_ext.rb:57:in `netzke'
+    app/views/welcome/index.html.erb:1
+
+Rendered rescues/_trace (56.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-09-05 21:20:57) [GET]
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mNetzkePreference Load (1.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks') [0m
+  [4;35;1mNetzkeFieldList Load (0.0ms)[0m   [0mMysql::Error: Table 'netzketest_development.netzke_field_lists' doesn't exist: SELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks') LIMIT 1[0m
+
+ActionView::TemplateError (Mysql::Error: Table 'netzketest_development.netzke_field_lists' doesn't exist: SELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks')  LIMIT 1) on line #1 of app/views/welcome/index.html.erb:
+1: <%= netzke :tasks, :class_name => "GridPanel", :model => "Task"  %>
+
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-basepack-0.5.13/lib/app/models/netzke_field_list.rb:201:in `pref_to_read'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-basepack-0.5.13/lib/app/models/netzke_field_list.rb:90:in `read_list'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-basepack-0.5.13/lib/netzke/grid_panel/grid_panel_columns.rb:119:in `load_columns'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-basepack-0.5.13/lib/netzke/grid_panel/grid_panel_columns.rb:56:in `columns'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-basepack-0.5.13/lib/netzke/grid_panel/grid_panel_columns.rb:218:in `default_fields_for_forms'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-basepack-0.5.13/lib/netzke/grid_panel.rb:303:in `initial_late_aggregatees'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:422:in `aggregatees'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:426:in `non_late_aggregatees'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:391:in `dependency_classes'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base_js.rb:67:in `js_missing_code'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/action_view_ext.rb:57:in `netzke'
+    app/views/welcome/index.html.erb:1
+
+Rendered rescues/_trace (54.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-09-05 21:21:42) [GET]
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mNetzkePreference Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks') [0m
+  [4;35;1mNetzkeFieldList Load (0.0ms)[0m   [0mMysql::Error: Table 'netzketest_development.netzke_field_lists' doesn't exist: SELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks') LIMIT 1[0m
+
+ActionView::TemplateError (Mysql::Error: Table 'netzketest_development.netzke_field_lists' doesn't exist: SELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks')  LIMIT 1) on line #1 of app/views/welcome/index.html.erb:
+1: <%= netzke :tasks, :class_name => "GridPanel", :model => "Task"  %>
+
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-basepack-0.5.13/lib/app/models/netzke_field_list.rb:201:in `pref_to_read'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-basepack-0.5.13/lib/app/models/netzke_field_list.rb:90:in `read_list'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-basepack-0.5.13/lib/netzke/grid_panel/grid_panel_columns.rb:119:in `load_columns'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-basepack-0.5.13/lib/netzke/grid_panel/grid_panel_columns.rb:56:in `columns'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-basepack-0.5.13/lib/netzke/grid_panel/grid_panel_columns.rb:218:in `default_fields_for_forms'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-basepack-0.5.13/lib/netzke/grid_panel.rb:303:in `initial_late_aggregatees'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:422:in `aggregatees'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:426:in `non_late_aggregatees'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:391:in `dependency_classes'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base_js.rb:67:in `js_missing_code'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/action_view_ext.rb:57:in `netzke'
+    app/views/welcome/index.html.erb:1
+
+Rendered rescues/_trace (56.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateNetzkePreferences (20100905024938)
+Migrating to CreateTasks (20100906001238)
+Migrating to CreateNetzkeFieldLists (20100906012044)
+  [4;36;1mSQL (21.0ms)[0m   [0;1mCREATE TABLE `netzke_field_lists` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `value` text, `model_name` varchar(255), `user_id` int(11), `role_id` int(11), `type` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100906012044')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `netzke_field_lists`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `netzke_field_lists`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `netzke_field_lists`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `netzke_preferences`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mdescribe `netzke_preferences`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `netzke_preferences`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `tasks`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `tasks`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-09-05 21:22:44) [GET]
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mNetzkePreference Load (1.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks') [0m
+  [4;35;1mNetzkeFieldList Load (0.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks') LIMIT 1[0m
+  [4;36;1mNetzkeModelAttrList Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `netzke_field_lists`[0m
+  [4;35;1mNetzkeModelAttrList Load (0.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+  [4;36;1mTask Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+
+ActionView::TemplateError (undefined method `done=' for #<Task:0x80f9568>) on line #1 of app/views/welcome/index.html.erb:
+1: <%= netzke :tasks, :class_name => "GridPanel", :model => "Task"  %>
+
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-basepack-0.5.13/lib/netzke/active_record/association_attributes.rb:61:in `method_missing'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-basepack-0.5.13/lib/netzke/grid_panel.rb:312:in `new'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-basepack-0.5.13/lib/netzke/grid_panel.rb:312:in `initial_late_aggregatees'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:422:in `aggregatees'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:426:in `non_late_aggregatees'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:391:in `dependency_classes'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base_js.rb:67:in `js_missing_code'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/action_view_ext.rb:57:in `netzke'
+    app/views/welcome/index.html.erb:1
+
+Rendered rescues/_trace (48.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-09-06 15:48:23) [GET]
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mNetzkePreference Load (675.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks') [0m
+  [4;35;1mNetzkeFieldList Load (23.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks') LIMIT 1[0m
+  [4;36;1mNetzkeModelAttrList Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `netzke_field_lists`[0m
+  [4;35;1mNetzkeModelAttrList Load (0.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+  [4;36;1mTask Columns (25.0ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+
+ActionView::TemplateError (undefined method `done=' for #<Task:0x85d5998>) on line #1 of app/views/welcome/index.html.erb:
+1: <%= netzke :tasks, :class_name => "GridPanel", :model => "Task"  %>
+
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-basepack-0.5.13/lib/netzke/active_record/association_attributes.rb:61:in `method_missing'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-basepack-0.5.13/lib/netzke/grid_panel.rb:312:in `new'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-basepack-0.5.13/lib/netzke/grid_panel.rb:312:in `initial_late_aggregatees'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:422:in `aggregatees'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:426:in `non_late_aggregatees'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:391:in `dependency_classes'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base_js.rb:67:in `js_missing_code'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/action_view_ext.rb:57:in `netzke'
+    app/views/welcome/index.html.erb:1
+
+Rendered rescues/_trace (51.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (166.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateNetzkeFieldLists (20100906012044)
+  [4;36;1mSQL (22.0ms)[0m   [0;1mDROP TABLE `netzke_field_lists`[0m
+  [4;35;1mSQL (43.0ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20100906012044'[0m
+Migrating to CreateTasks (20100906001238)
+  [4;36;1mSQL (3.0ms)[0m   [0;1mDROP TABLE `tasks`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20100906001238'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (17.0ms)[0m   [0mSHOW FIELDS FROM `netzke_preferences`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mdescribe `netzke_preferences`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `netzke_preferences`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateNetzkePreferences (20100905024938)
+Migrating to CreateTasks (20100906001238)
+  [4;36;1mSQL (173.0ms)[0m   [0;1mCREATE TABLE `tasks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `done` tinyint(1) DEFAULT 0, `name` varchar(255), `notes` text, `priority` int(11), `due` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (10.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100906001238')[0m
+Migrating to CreateNetzkeFieldLists (20100906012044)
+  [4;36;1mSQL (62.0ms)[0m   [0;1mCREATE TABLE `netzke_field_lists` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `value` text, `model_name` varchar(255), `user_id` int(11), `role_id` int(11), `type` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (14.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100906012044')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `netzke_field_lists`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mdescribe `netzke_field_lists`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `netzke_field_lists`[0m
+  [4;36;1mSQL (11.0ms)[0m   [0;1mSHOW FIELDS FROM `netzke_preferences`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mdescribe `netzke_preferences`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `netzke_preferences`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `tasks`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `tasks`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-09-06 17:43:36) [GET]
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mNetzkePreference Load (1.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks') [0m
+  [4;35;1mNetzkeFieldList Load (0.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks') LIMIT 1[0m
+  [4;36;1mNetzkeModelAttrList Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `netzke_field_lists`[0m
+  [4;35;1mNetzkeModelAttrList Load (0.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+  [4;36;1mTask Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;35;1mNetzkePreference Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `netzke_preferences`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mTask Load (0.0ms)[0m   [0;1mSELECT * FROM `tasks` WHERE ((`tasks`.`done` = 0)) LIMIT 0, 25[0m
+Completed in 407ms (View: 399, DB: 7) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#netzke to css (for 127.0.0.1 at 2010-09-06 17:43:38) [GET]
+Completed in 245ms (View: 2, DB: 0) | 200 OK [http://localhost/netzke/netzke.css]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#netzke to js (for 127.0.0.1 at 2010-09-06 17:43:39) [GET]
+Completed in 56ms (View: 1, DB: 0) | 200 OK [http://localhost/netzke/netzke.js]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#tasks__load_aggregatee_with_cache (for 127.0.0.1 at 2010-09-06 17:44:07) [POST]
+  Parameters: {"cache"=>"GridPanel,", "container"=>"", "authenticity_token"=>"X/oFCCca2W+PAQAu4EpnXvTv2cplzGiYVtxgFkFwPvw=", "id"=>"addForm"}
+  [4;35;1mNetzkePreference Load (1.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks') [0m
+  [4;36;1mNetzkeFieldList Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks') LIMIT 1[0m
+  [4;35;1mNetzkeModelAttrList Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `netzke_field_lists`[0m
+  [4;36;1mNetzkeModelAttrList Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+  [4;35;1mTask Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+  [4;36;1mNetzkePreference Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__add_form') [0m
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__add_form__item') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__add_form__item') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__add_form__item') [0m
+  [4;36;1mNetzkePreference Load (1.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__add_form__item' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__add_form__item' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;36;1mNetzkePreference Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `netzke_preferences`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mNetzkeFieldList Load (0.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks__add_form__item') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+  [4;35;1mNetzkePreference Load (1.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__add_form' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__add_form' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Completed in 302ms (View: 0, DB: 8) | 200 OK [http://localhost/netzke/tasks__load_aggregatee_with_cache]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#tasks__post_data (for 127.0.0.1 at 2010-09-06 17:44:23) [POST]
+  Parameters: {"created_records"=>"[{\"name\":\"Hello\",\"done\":false,\"id\":\"ext-record-193\"}]", "base_params"=>"{}", "authenticity_token"=>"X/oFCCca2W+PAQAu4EpnXvTv2cplzGiYVtxgFkFwPvw="}
+  [4;35;1mNetzkePreference Load (1.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks') [0m
+  [4;36;1mTask Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mTask Create (0.0ms)[0m   [0;1mINSERT INTO `tasks` (`name`, `created_at`, `notes`, `updated_at`, `done`, `priority`, `due`) VALUES('Hello', '2010-09-06 21:44:23', NULL, '2010-09-06 21:44:23', 0, NULL, NULL)[0m
+  [4;35;1mSQL (20.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mNetzkeFieldList Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks') LIMIT 1[0m
+  [4;35;1mNetzkeModelAttrList Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `netzke_field_lists`[0m
+  [4;36;1mNetzkeModelAttrList Load (1.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+Completed in 540ms (View: 0, DB: 26) | 200 OK [http://localhost/netzke/tasks__post_data]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#tasks__get_data (for 127.0.0.1 at 2010-09-06 17:44:25) [POST]
+  Parameters: {"authenticity_token"=>"", "start"=>"0", "limit"=>"25"}
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks') [0m
+  [4;36;1mTask Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+  [4;35;1mTask Load (0.0ms)[0m   [0mSELECT * FROM `tasks` WHERE ((`tasks`.`done` = 0)) LIMIT 0, 25[0m
+  [4;36;1mNetzkeFieldList Load (1.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks') LIMIT 1[0m
+  [4;35;1mNetzkeModelAttrList Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `netzke_field_lists`[0m
+  [4;36;1mNetzkeModelAttrList Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+Completed in 125ms (View: 0, DB: 6) | 200 OK [http://localhost/netzke/tasks__get_data]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#tasks__post_data (for 127.0.0.1 at 2010-09-06 17:44:25) [POST]
+  Parameters: {"created_records"=>"[{\"name\":\"Hello\",\"done\":false,\"id\":\"ext-record-193\"}]", "base_params"=>"{}", "authenticity_token"=>"X/oFCCca2W+PAQAu4EpnXvTv2cplzGiYVtxgFkFwPvw="}
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks') [0m
+  [4;36;1mTask Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mTask Create (0.0ms)[0m   [0;1mINSERT INTO `tasks` (`name`, `created_at`, `notes`, `updated_at`, `done`, `priority`, `due`) VALUES('Hello', '2010-09-06 21:44:25', NULL, '2010-09-06 21:44:25', 0, NULL, NULL)[0m
+  [4;35;1mSQL (40.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mNetzkeFieldList Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks') LIMIT 1[0m
+  [4;35;1mNetzkeModelAttrList Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `netzke_field_lists`[0m
+  [4;36;1mNetzkeModelAttrList Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+Completed in 129ms (View: 0, DB: 44) | 200 OK [http://localhost/netzke/tasks__post_data]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#tasks__get_data (for 127.0.0.1 at 2010-09-06 17:44:26) [POST]
+  Parameters: {"authenticity_token"=>"", "start"=>"0", "limit"=>"25"}
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks') [0m
+  [4;36;1mTask Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+  [4;35;1mTask Load (0.0ms)[0m   [0mSELECT * FROM `tasks` WHERE ((`tasks`.`done` = 0)) LIMIT 0, 25[0m
+  [4;36;1mNetzkeFieldList Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks') LIMIT 1[0m
+  [4;35;1mNetzkeModelAttrList Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `netzke_field_lists`[0m
+  [4;36;1mNetzkeModelAttrList Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+Completed in 87ms (View: 0, DB: 5) | 200 OK [http://localhost/netzke/tasks__get_data]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#tasks__get_data (for 127.0.0.1 at 2010-09-06 17:44:27) [POST]
+  Parameters: {"authenticity_token"=>"", "start"=>"0", "limit"=>"25"}
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks') [0m
+  [4;36;1mTask Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+  [4;35;1mTask Load (0.0ms)[0m   [0mSELECT * FROM `tasks` WHERE ((`tasks`.`done` = 0)) LIMIT 0, 25[0m
+  [4;36;1mNetzkeFieldList Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks') LIMIT 1[0m
+  [4;35;1mNetzkeModelAttrList Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `netzke_field_lists`[0m
+  [4;36;1mNetzkeModelAttrList Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+Completed in 86ms (View: 0, DB: 4) | 200 OK [http://localhost/netzke/tasks__get_data]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#tasks__get_data (for 127.0.0.1 at 2010-09-06 17:44:27) [POST]
+  Parameters: {"authenticity_token"=>"", "start"=>"0", "limit"=>"25"}
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks') [0m
+  [4;36;1mTask Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+  [4;35;1mTask Load (1.0ms)[0m   [0mSELECT * FROM `tasks` WHERE ((`tasks`.`done` = 0)) LIMIT 0, 25[0m
+  [4;36;1mNetzkeFieldList Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks') LIMIT 1[0m
+  [4;35;1mNetzkeModelAttrList Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `netzke_field_lists`[0m
+  [4;36;1mNetzkeModelAttrList Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+Completed in 128ms (View: 0, DB: 5) | 200 OK [http://localhost/netzke/tasks__get_data]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#tasks__load_aggregatee_with_cache (for 127.0.0.1 at 2010-09-06 17:44:32) [POST]
+  Parameters: {"record_id"=>"2", "cache"=>"GridPanel,GridPanel.RecordFormWindow,FormPanel,Window,", "container"=>"", "authenticity_token"=>"X/oFCCca2W+PAQAu4EpnXvTv2cplzGiYVtxgFkFwPvw=", "id"=>"editForm"}
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks') [0m
+  [4;36;1mNetzkeFieldList Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks') LIMIT 1[0m
+  [4;35;1mNetzkeModelAttrList Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `netzke_field_lists`[0m
+  [4;36;1mNetzkeModelAttrList Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+  [4;35;1mTask Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+  [4;36;1mNetzkePreference Load (1.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__edit_form') [0m
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__edit_form__item') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__edit_form__item') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__edit_form__item') [0m
+  [4;36;1mNetzkePreference Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__edit_form__item' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__edit_form__item' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;36;1mNetzkePreference Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `netzke_preferences`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mNetzkeFieldList Load (0.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks__edit_form__item') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+  [4;35;1mTask Load (0.0ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`id` = '2') AND (`tasks`.`done` = 0) LIMIT 1[0m
+  [4;36;1mNetzkePreference Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__edit_form' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__edit_form' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Completed in 154ms (View: 0, DB: 7) | 200 OK [http://localhost/netzke/tasks__load_aggregatee_with_cache]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#tasks__delete_data (for 127.0.0.1 at 2010-09-06 17:45:33) [POST]
+  Parameters: {"authenticity_token"=>"X/oFCCca2W+PAQAu4EpnXvTv2cplzGiYVtxgFkFwPvw=", "records"=>"[2]"}
+  [4;36;1mNetzkePreference Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks') [0m
+  [4;35;1mTask Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+  [4;36;1mTask Load (1.0ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`id` = 2) AND (`tasks`.`done` = 0) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mTask Destroy (1.0ms)[0m   [0;1mDELETE FROM `tasks` WHERE `id` = 2[0m
+  [4;35;1mSQL (419.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mTask Load (0.0ms)[0m   [0;1mSELECT * FROM `tasks` WHERE ((`tasks`.`done` = 0)) LIMIT 0, 25[0m
+  [4;35;1mNetzkeFieldList Load (0.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks') LIMIT 1[0m
+  [4;36;1mNetzkeModelAttrList Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `netzke_field_lists`[0m
+  [4;35;1mNetzkeModelAttrList Load (0.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+Completed in 549ms (View: 0, DB: 425) | 200 OK [http://localhost/netzke/tasks__delete_data]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-09-06 17:46:18) [GET]
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mNetzkePreference Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks') [0m
+  [4;35;1mNetzkeFieldList Load (0.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks') LIMIT 1[0m
+  [4;36;1mNetzkeModelAttrList Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `netzke_field_lists`[0m
+  [4;35;1mNetzkeModelAttrList Load (0.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+  [4;36;1mTask Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+  [4;35;1mNetzkePreference Load (1.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;35;1mNetzkePreference Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `netzke_preferences`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mTask Load (0.0ms)[0m   [0;1mSELECT * FROM `tasks` WHERE ((`tasks`.`done` = 0)) LIMIT 0, 25[0m
+Completed in 174ms (View: 164, DB: 8) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#netzke to css (for 127.0.0.1 at 2010-09-06 17:46:20) [GET]
+Completed in 23ms (View: 1, DB: 0) | 200 OK [http://localhost/netzke/netzke.css]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#netzke to js (for 127.0.0.1 at 2010-09-06 17:46:21) [GET]
+Completed in 12ms (View: 1, DB: 0) | 200 OK [http://localhost/netzke/netzke.js]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#tasks__load_aggregatee_with_cache (for 127.0.0.1 at 2010-09-06 17:54:20) [POST]
+  Parameters: {"cache"=>"GridPanel,", "container"=>"", "authenticity_token"=>"X/oFCCca2W+PAQAu4EpnXvTv2cplzGiYVtxgFkFwPvw=", "id"=>"addForm"}
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks') [0m
+  [4;36;1mNetzkeFieldList Load (1.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks') LIMIT 1[0m
+  [4;35;1mNetzkeModelAttrList Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `netzke_field_lists`[0m
+  [4;36;1mNetzkeModelAttrList Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+  [4;35;1mTask Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+  [4;36;1mNetzkePreference Load (1.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__add_form') [0m
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__add_form__item') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__add_form__item') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__add_form__item') [0m
+  [4;36;1mNetzkePreference Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__add_form__item' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__add_form__item' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;36;1mNetzkePreference Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `netzke_preferences`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mNetzkeFieldList Load (0.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks__add_form__item') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__add_form' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__add_form' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Completed in 196ms (View: 0, DB: 7) | 200 OK [http://localhost/netzke/tasks__load_aggregatee_with_cache]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#tasks__add_form__item__netzke_submit (for 127.0.0.1 at 2010-09-06 17:54:29) [POST]
+  Parameters: {"data"=>"{\"done\":\"false\",\"name\":\"Hello\"}", "authenticity_token"=>"X/oFCCca2W+PAQAu4EpnXvTv2cplzGiYVtxgFkFwPvw="}
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks') [0m
+  [4;36;1mNetzkeFieldList Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks') LIMIT 1[0m
+  [4;35;1mNetzkeModelAttrList Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `netzke_field_lists`[0m
+  [4;36;1mNetzkeModelAttrList Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+  [4;35;1mTask Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+  [4;36;1mNetzkePreference Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__add_form') [0m
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__add_form__item') [0m
+  [4;36;1mTask Load (0.0ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`id` IS NULL) AND (`tasks`.`done` = 0) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mTask Create (0.0ms)[0m   [0;1mINSERT INTO `tasks` (`name`, `created_at`, `notes`, `updated_at`, `done`, `priority`, `due`) VALUES('Hello', '2010-09-06 21:54:29', NULL, '2010-09-06 21:54:29', 0, NULL, NULL)[0m
+  [4;35;1mSQL (22.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mNetzkeFieldList Load (1.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks__add_form__item') LIMIT 1[0m
+  [4;35;1mNetzkeModelAttrList Load (0.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+Completed in 158ms (View: 0, DB: 27) | 200 OK [http://localhost/netzke/tasks__add_form__item__netzke_submit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#tasks__get_data (for 127.0.0.1 at 2010-09-06 17:54:32) [POST]
+  Parameters: {"authenticity_token"=>"", "start"=>"0", "limit"=>"25"}
+  [4;36;1mNetzkePreference Load (1.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks') [0m
+  [4;35;1mTask Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+  [4;36;1mTask Load (0.0ms)[0m   [0;1mSELECT * FROM `tasks` WHERE ((`tasks`.`done` = 0)) LIMIT 0, 25[0m
+  [4;35;1mNetzkeFieldList Load (0.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks') LIMIT 1[0m
+  [4;36;1mNetzkeModelAttrList Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `netzke_field_lists`[0m
+  [4;35;1mNetzkeModelAttrList Load (0.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+Completed in 88ms (View: 1, DB: 5) | 200 OK [http://localhost/netzke/tasks__get_data]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#tasks__load_aggregatee_with_cache (for 127.0.0.1 at 2010-09-06 18:48:03) [POST]
+  Parameters: {"record_id"=>"1", "cache"=>"GridPanel,GridPanel.RecordFormWindow,FormPanel,Window,", "container"=>"", "authenticity_token"=>"X/oFCCca2W+PAQAu4EpnXvTv2cplzGiYVtxgFkFwPvw=", "id"=>"editForm"}
+  [4;36;1mNetzkePreference Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks') [0m
+  [4;35;1mNetzkeFieldList Load (1.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks') LIMIT 1[0m
+  [4;36;1mNetzkeModelAttrList Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `netzke_field_lists`[0m
+  [4;35;1mNetzkeModelAttrList Load (0.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+  [4;36;1mTask Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__edit_form') [0m
+  [4;36;1mNetzkePreference Load (1.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__edit_form__item') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__edit_form__item') [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__edit_form__item') [0m
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__edit_form__item' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__edit_form__item' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;35;1mNetzkePreference Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `netzke_preferences`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mNetzkeFieldList Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks__edit_form__item') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+  [4;36;1mTask Load (0.0ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`id` = '1') AND (`tasks`.`done` = 0) LIMIT 1[0m
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__edit_form' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__edit_form' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Completed in 155ms (View: 0, DB: 6) | 200 OK [http://localhost/netzke/tasks__load_aggregatee_with_cache]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#tasks__edit_form__item__netzke_submit (for 127.0.0.1 at 2010-09-06 18:48:13) [POST]
+  Parameters: {"data"=>"{\"id\":\"1\",\"done\":\"false\",\"name\":\"Hello\",\"due\":\"09/05/2010\",\"created_at\":\"2010-09-06 21:44:00\",\"updated_at\":\"2010-09-06 21:44:00\"}", "authenticity_token"=>"X/oFCCca2W+PAQAu4EpnXvTv2cplzGiYVtxgFkFwPvw="}
+  [4;35;1mNetzkePreference Load (1.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks') [0m
+  [4;36;1mNetzkeFieldList Load (1.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks') LIMIT 1[0m
+  [4;35;1mNetzkeModelAttrList Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `netzke_field_lists`[0m
+  [4;36;1mNetzkeModelAttrList Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+  [4;35;1mTask Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+  [4;36;1mNetzkePreference Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__edit_form') [0m
+  [4;35;1mNetzkePreference Load (1.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__edit_form__item') [0m
+  [4;36;1mTask Load (0.0ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`id` = '1') AND (`tasks`.`done` = 0) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mTask Update (24.0ms)[0m   [0;1mUPDATE `tasks` SET `updated_at` = '2010-09-06 22:48:13', `created_at` = '2010-09-06 21:44:00', `due` = '2010-09-05' WHERE `id` = 1[0m
+  [4;35;1mSQL (427.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mNetzkeFieldList Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks__edit_form__item') LIMIT 1[0m
+  [4;35;1mNetzkeModelAttrList Load (1.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+Completed in 591ms (View: 0, DB: 459) | 200 OK [http://localhost/netzke/tasks__edit_form__item__netzke_submit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#tasks__get_data (for 127.0.0.1 at 2010-09-06 18:48:15) [POST]
+  Parameters: {"authenticity_token"=>"", "start"=>"0", "limit"=>"25"}
+  [4;36;1mNetzkePreference Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks') [0m
+  [4;35;1mTask Columns (110.0ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+  [4;36;1mTask Load (0.0ms)[0m   [0;1mSELECT * FROM `tasks` WHERE ((`tasks`.`done` = 0)) LIMIT 0, 25[0m
+  [4;35;1mNetzkeFieldList Load (0.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks') LIMIT 1[0m
+  [4;36;1mNetzkeModelAttrList Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `netzke_field_lists`[0m
+  [4;35;1mNetzkeModelAttrList Load (0.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+Completed in 239ms (View: 1, DB: 112) | 200 OK [http://localhost/netzke/tasks__get_data]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-09-06 18:50:42) [GET]
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mNetzkePreference Load (1.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks') [0m
+  [4;35;1mNetzkeFieldList Load (0.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks') LIMIT 1[0m
+  [4;36;1mNetzkeModelAttrList Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `netzke_field_lists`[0m
+  [4;35;1mNetzkeModelAttrList Load (0.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+  [4;36;1mTask Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;35;1mNetzkePreference Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `netzke_preferences`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mTask Load (1.0ms)[0m   [0;1mSELECT * FROM `tasks` WHERE ((`tasks`.`done` = 0)) LIMIT 0, 25[0m
+Completed in 136ms (View: 126, DB: 8) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#netzke to css (for 127.0.0.1 at 2010-09-06 18:50:44) [GET]
+Completed in 23ms (View: 1, DB: 0) | 200 OK [http://localhost/netzke/netzke.css]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#netzke to js (for 127.0.0.1 at 2010-09-06 18:50:45) [GET]
+Completed in 15ms (View: 2, DB: 0) | 200 OK [http://localhost/netzke/netzke.js]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-09-06 18:51:00) [GET]
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks') [0m
+  [4;36;1mNetzkeFieldList Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks') LIMIT 1[0m
+  [4;35;1mNetzkeModelAttrList Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `netzke_field_lists`[0m
+  [4;36;1mNetzkeModelAttrList Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+  [4;35;1mTask Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+  [4;36;1mNetzkePreference Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;36;1mNetzkePreference Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `netzke_preferences`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mTask Load (0.0ms)[0m   [0mSELECT * FROM `tasks` WHERE ((`tasks`.`done` = 0)) LIMIT 0, 25[0m
+Completed in 552ms (View: 544, DB: 6) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#netzke to css (for 127.0.0.1 at 2010-09-06 18:51:03) [GET]
+Completed in 4ms (View: 0, DB: 0) | 200 OK [http://localhost/netzke/netzke.css]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#netzke to js (for 127.0.0.1 at 2010-09-06 18:51:12) [GET]
+Completed in 10ms (View: 1, DB: 0) | 200 OK [http://localhost/netzke/netzke.js]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-09-06 19:05:14) [GET]
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mNetzkePreference Load (1.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks') [0m
+  [4;35;1mNetzkeFieldList Load (0.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks') LIMIT 1[0m
+  [4;36;1mNetzkeModelAttrList Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `netzke_field_lists`[0m
+  [4;35;1mNetzkeModelAttrList Load (0.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+  [4;36;1mTask Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;35;1mNetzkePreference Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `netzke_preferences`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mTask Load (0.0ms)[0m   [0;1mSELECT * FROM `tasks` WHERE ((`tasks`.`done` = 0)) LIMIT 0, 25[0m
+Completed in 134ms (View: 126, DB: 8) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#netzke to css (for 127.0.0.1 at 2010-09-06 19:05:15) [GET]
+Completed in 49ms (View: 1, DB: 0) | 200 OK [http://localhost/netzke/netzke.css]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#netzke to js (for 127.0.0.1 at 2010-09-06 19:05:16) [GET]
+Completed in 10ms (View: 1, DB: 0) | 200 OK [http://localhost/netzke/netzke.js]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-09-06 19:06:34) [GET]
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mNetzkePreference Load (1.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks') [0m
+  [4;36;1mNetzkeFieldList Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks') LIMIT 1[0m
+  [4;35;1mNetzkeModelAttrList Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `netzke_field_lists`[0m
+  [4;36;1mNetzkeModelAttrList Load (1.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+  [4;35;1mTask Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+  [4;36;1mNetzkePreference Load (1.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;36;1mNetzkePreference Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `netzke_preferences`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mTask Load (1.0ms)[0m   [0mSELECT * FROM `tasks` WHERE ((`tasks`.`done` = 0)) LIMIT 0, 25[0m
+Completed in 135ms (View: 124, DB: 10) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#netzke to css (for 127.0.0.1 at 2010-09-06 19:06:36) [GET]
+Completed in 27ms (View: 2, DB: 0) | 200 OK [http://localhost/netzke/netzke.css]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#netzke to js (for 127.0.0.1 at 2010-09-06 19:06:37) [GET]
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://localhost/netzke/netzke.js]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-09-06 19:34:53) [GET]
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mNetzkePreference Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks') [0m
+  [4;35;1mNetzkeFieldList Load (1.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks') LIMIT 1[0m
+  [4;36;1mNetzkeModelAttrList Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `netzke_field_lists`[0m
+  [4;35;1mNetzkeModelAttrList Load (1.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+  [4;36;1mTask Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+  [4;35;1mNetzkePreference Load (1.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;35;1mNetzkePreference Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `netzke_preferences`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mTask Load (1.0ms)[0m   [0;1mSELECT * FROM `tasks` WHERE ((`tasks`.`done` = 0)) LIMIT 0, 25[0m
+Completed in 172ms (View: 161, DB: 10) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#netzke to css (for 127.0.0.1 at 2010-09-06 19:34:55) [GET]
+Completed in 12ms (View: 2, DB: 0) | 200 OK [http://localhost/netzke/netzke.css]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#netzke to js (for 127.0.0.1 at 2010-09-06 19:34:56) [GET]
+Completed in 10ms (View: 1, DB: 1) | 200 OK [http://localhost/netzke/netzke.js]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#tasks__load_aggregatee_with_cache (for 127.0.0.1 at 2010-09-06 19:35:16) [POST]
+  Parameters: {"cache"=>"GridPanel,", "container"=>"ext-comp-1068", "authenticity_token"=>"X/oFCCca2W+PAQAu4EpnXvTv2cplzGiYVtxgFkFwPvw=", "id"=>"searchPanel"}
+  [4;35;1mNetzkePreference Load (1.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks') [0m
+  [4;36;1mNetzkeFieldList Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks') LIMIT 1[0m
+  [4;35;1mNetzkeModelAttrList Columns (158.0ms)[0m   [0mSHOW FIELDS FROM `netzke_field_lists`[0m
+  [4;36;1mNetzkeModelAttrList Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+  [4;35;1mTask Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+  [4;36;1mNetzkePreference Load (1.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__search_panel') [0m
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__search_panel' AND `netzke_preferences`.`name` = 'saved_searches') LIMIT 1[0m
+  [4;36;1mNetzkePreference Load (1.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__search_panel' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__search_panel' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;36;1mNetzkePreference Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `netzke_preferences`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mNetzkeFieldList Load (0.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks__search_panel') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+Completed in 527ms (View: 0, DB: 166) | 200 OK [http://localhost/netzke/tasks__load_aggregatee_with_cache]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-09-06 19:37:23) [GET]
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mNetzkePreference Load (1.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks') [0m
+  [4;36;1mNetzkeFieldList Load (1.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks') LIMIT 1[0m
+  [4;35;1mNetzkeModelAttrList Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `netzke_field_lists`[0m
+  [4;36;1mNetzkeModelAttrList Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+  [4;35;1mTask Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+  [4;36;1mNetzkePreference Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;36;1mNetzkePreference Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `netzke_preferences`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mTask Load (0.0ms)[0m   [0mSELECT * FROM `tasks` WHERE ((`tasks`.`done` = 0)) LIMIT 0, 25[0m
+Completed in 126ms (View: 116, DB: 8) | 200 OK [http://localhost/]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#netzke to css (for 127.0.0.1 at 2010-09-06 19:37:24) [GET]
+Completed in 18ms (View: 2, DB: 1) | 200 OK [http://localhost/netzke/netzke.css]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#netzke to js (for 127.0.0.1 at 2010-09-06 19:37:25) [GET]
+Completed in 10ms (View: 0, DB: 0) | 200 OK [http://localhost/netzke/netzke.js]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-09-12 01:25:20) [GET]
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mNetzkePreference Load (61.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks') [0m
+  [4;35;1mNetzkeFieldList Load (14.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks') LIMIT 1[0m
+  [4;36;1mNetzkeModelAttrList Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `netzke_field_lists`[0m
+  [4;35;1mNetzkeModelAttrList Load (0.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+  [4;36;1mTask Columns (25.0ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+  [4;35;1mNetzkePreference Load (1.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;35;1mNetzkePreference Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `netzke_preferences`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mTask Load (0.0ms)[0m   [0;1mSELECT * FROM `tasks` WHERE ((`tasks`.`done` = 0)) LIMIT 0, 25[0m
+Completed in 1626ms (View: 1272, DB: 106) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#netzke to css (for 127.0.0.1 at 2010-09-12 01:25:22) [GET]
+Completed in 48ms (View: 2, DB: 1) | 200 OK [http://localhost/netzke/netzke.css]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#netzke to js (for 127.0.0.1 at 2010-09-12 01:25:23) [GET]
+Completed in 56ms (View: 1, DB: 0) | 200 OK [http://localhost/netzke/netzke.js]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#tasks__load_aggregatee_with_cache (for 127.0.0.1 at 2010-09-12 01:25:38) [POST]
+  Parameters: {"cache"=>"GridPanel,", "container"=>"ext-comp-1068", "authenticity_token"=>"X/oFCCca2W+PAQAu4EpnXvTv2cplzGiYVtxgFkFwPvw=", "id"=>"searchPanel"}
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks') [0m
+  [4;36;1mNetzkeFieldList Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks') LIMIT 1[0m
+  [4;35;1mNetzkeModelAttrList Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `netzke_field_lists`[0m
+  [4;36;1mNetzkeModelAttrList Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+  [4;35;1mTask Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+  [4;36;1mNetzkePreference Load (1.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__search_panel') [0m
+  [4;35;1mNetzkePreference Load (1.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__search_panel' AND `netzke_preferences`.`name` = 'saved_searches') LIMIT 1[0m
+  [4;36;1mNetzkePreference Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__search_panel' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks__search_panel' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;36;1mNetzkePreference Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `netzke_preferences`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mNetzkeFieldList Load (0.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks__search_panel') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+Completed in 281ms (View: 0, DB: 8) | 200 OK [http://localhost/netzke/tasks__load_aggregatee_with_cache]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#tasks__get_data (for 127.0.0.1 at 2010-09-12 01:26:15) [POST]
+  Parameters: {"authenticity_token"=>"", "start"=>"0", "limit"=>"25"}
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks') [0m
+  [4;36;1mTask Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+  [4;35;1mTask Load (0.0ms)[0m   [0mSELECT * FROM `tasks` WHERE ((`tasks`.`done` = 0)) LIMIT 0, 25[0m
+  [4;36;1mNetzkeFieldList Load (1.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks') LIMIT 1[0m
+  [4;35;1mNetzkeModelAttrList Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `netzke_field_lists`[0m
+  [4;36;1mNetzkeModelAttrList Load (1.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+Completed in 87ms (View: 0, DB: 5) | 200 OK [http://localhost/netzke/tasks__get_data]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (18.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (10.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateNetzkePreferences (20100905024938)
+Migrating to CreateTasks (20100906001238)
+Migrating to CreateNetzkeFieldLists (20100906012044)
+Migrating to CreateBooks (20101024173152)
+  [4;36;1mSQL (44.0ms)[0m   [0;1mCREATE TABLE `books` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `amount` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101024173152')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `books`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `books`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `books`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `netzke_field_lists`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mdescribe `netzke_field_lists`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `netzke_field_lists`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `netzke_preferences`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mdescribe `netzke_preferences`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `netzke_preferences`[0m
+  [4;36;1mSQL (18.0ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mdescribe `tasks`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `tasks`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-10-24 13:39:18) [GET]
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mNetzkePreference Load (7.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks') [0m
+  [4;35;1mNetzkeFieldList Load (1.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks') LIMIT 1[0m
+  [4;36;1mNetzkeModelAttrList Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `netzke_field_lists`[0m
+  [4;35;1mNetzkeModelAttrList Load (0.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+  [4;36;1mTask Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+  [4;35;1mNetzkePreference Load (1.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;35;1mNetzkePreference Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `netzke_preferences`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mTask Load (1.0ms)[0m   [0;1mSELECT * FROM `tasks` WHERE ((`tasks`.`done` = 0)) LIMIT 0, 25[0m
+Completed in 2582ms (View: 646, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#netzke to css (for 127.0.0.1 at 2010-10-24 13:39:22) [GET]
+Completed in 30ms (View: 1, DB: 0) | 200 OK [http://localhost/netzke/netzke.css]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#netzke to js (for 127.0.0.1 at 2010-10-24 13:39:23) [GET]
+Completed in 86ms (View: 1, DB: 0) | 200 OK [http://localhost/netzke/netzke.js]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#tasks__post_data (for 127.0.0.1 at 2010-10-24 13:39:49) [POST]
+  Parameters: {"created_records"=>"[{\"name\":\"Hello world\",\"id\":\"ext-record-1\"}]", "base_params"=>"{}", "authenticity_token"=>"zpGzDeKaNLoyK20wSbE3Ly196m7OxSr35jglgb2WnFA=", "updated_records"=>"[{\"done\":false,\"id\":3}]"}
+  [4;35;1mNetzkePreference Load (1.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks') [0m
+  [4;36;1mTask Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mTask Create (0.0ms)[0m   [0;1mINSERT INTO `tasks` (`name`, `created_at`, `notes`, `updated_at`, `done`, `priority`, `due`) VALUES('Hello world', '2010-10-24 17:39:49', NULL, '2010-10-24 17:39:49', 0, NULL, NULL)[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mNetzkeFieldList Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks') LIMIT 1[0m
+  [4;35;1mNetzkeModelAttrList Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `netzke_field_lists`[0m
+  [4;36;1mNetzkeModelAttrList Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+  [4;35;1mTask Load (0.0ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`id` = 3) AND (`tasks`.`done` = 0) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Completed in 115ms (View: 1, DB: 19) | 200 OK [http://localhost/netzke/tasks__post_data]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#tasks__get_data (for 127.0.0.1 at 2010-10-24 13:39:51) [POST]
+  Parameters: {"authenticity_token"=>"", "start"=>"0", "limit"=>"25"}
+  [4;36;1mNetzkePreference Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks') [0m
+  [4;35;1mTask Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+  [4;36;1mTask Load (0.0ms)[0m   [0;1mSELECT * FROM `tasks` WHERE ((`tasks`.`done` = 0)) LIMIT 0, 25[0m
+  [4;35;1mNetzkeFieldList Load (0.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks') LIMIT 1[0m
+  [4;36;1mNetzkeModelAttrList Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `netzke_field_lists`[0m
+  [4;35;1mNetzkeModelAttrList Load (0.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+Completed in 82ms (View: 0, DB: 4) | 200 OK [http://localhost/netzke/tasks__get_data]
+  [4;36;1mSQL (53.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-10-25 13:18:08) [GET]
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mNetzkePreference Load (109.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks') [0m
+  [4;35;1mNetzkeFieldList Load (32.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks') LIMIT 1[0m
+  [4;36;1mNetzkeModelAttrList Columns (18.0ms)[0m   [0;1mSHOW FIELDS FROM `netzke_field_lists`[0m
+  [4;35;1mNetzkeModelAttrList Load (0.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+  [4;36;1mTask Columns (24.0ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;35;1mNetzkePreference Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `netzke_preferences`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mTask Load (1.0ms)[0m   [0;1mSELECT * FROM `tasks` WHERE ((`tasks`.`done` = 0)) LIMIT 0, 25[0m
+Completed in 826ms (View: 611, DB: 240) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#netzke to css (for 127.0.0.1 at 2010-10-25 13:18:11) [GET]
+Completed in 25ms (View: 1, DB: 0) | 200 OK [http://localhost/netzke/netzke.css]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#netzke to js (for 127.0.0.1 at 2010-10-25 13:18:12) [GET]
+Completed in 59ms (View: 1, DB: 0) | 200 OK [http://localhost/netzke/netzke.js]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#tasks__get_data (for 127.0.0.1 at 2010-10-25 13:38:16) [POST]
+  Parameters: {"authenticity_token"=>"", "start"=>"0", "limit"=>"25"}
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks') [0m
+  [4;36;1mTask Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+  [4;35;1mTask Load (0.0ms)[0m   [0mSELECT * FROM `tasks` WHERE ((`tasks`.`done` = 0)) LIMIT 0, 25[0m
+  [4;36;1mNetzkeFieldList Load (1.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks') LIMIT 1[0m
+  [4;35;1mNetzkeModelAttrList Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `netzke_field_lists`[0m
+  [4;36;1mNetzkeModelAttrList Load (1.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+Completed in 120ms (View: 0, DB: 6) | 200 OK [http://localhost/netzke/tasks__get_data]
+  [4;36;1mSQL (25.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (19.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-11-07 19:24:15) [GET]
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mNetzkePreference Load (155.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks') [0m
+  [4;35;1mNetzkeFieldList Load (13.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks') LIMIT 1[0m
+  [4;36;1mNetzkeModelAttrList Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `netzke_field_lists`[0m
+  [4;35;1mNetzkeModelAttrList Load (0.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+  [4;36;1mTask Columns (29.0ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;35;1mNetzkePreference Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `netzke_preferences`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mTask Load (1.0ms)[0m   [0;1mSELECT * FROM `tasks` WHERE ((`tasks`.`done` = 0)) LIMIT 0, 25[0m
+Completed in 1728ms (View: 640, DB: 247) | 200 OK [http://localhost/]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#netzke to css (for 127.0.0.1 at 2010-11-07 19:24:18) [GET]
+Completed in 62ms (View: 1, DB: 2) | 200 OK [http://localhost/netzke/netzke.css]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#netzke to js (for 127.0.0.1 at 2010-11-07 19:24:19) [GET]
+Completed in 87ms (View: 1, DB: 0) | 200 OK [http://localhost/netzke/netzke.js]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-07 19:25:22) [GET]
+
+ActionController::RoutingError (No route matches "/test_accordion" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#test_accordion (for 127.0.0.1 at 2010-11-07 19:28:05) [GET]
+Rendering template within layouts/application
+Rendering welcome/test_accordion
+
+ActionView::TemplateError (uninitialized constant Netzke::MyAccordion) on line #3 of app/views/welcome/test_accordion.html.erb:
+1: <%#
+2: # To change this template, choose Tools | Templates
+3: # and open the template in the editor.
+4: %>
+5: 
+6: <%= netzke :my_accordion,:items => [{
+
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:160:in `instance_by_config'
+    C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/action_view_ext.rb:55:in `netzke'
+    app/views/welcome/test_accordion.html.erb:3
+
+Rendered rescues/_trace (48.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#test_accordion (for 127.0.0.1 at 2010-11-07 19:31:13) [GET]
+Rendering template within layouts/application
+Rendering welcome/test_accordion
+
+ActionView::TemplateError (undefined local variable or method `class_name' for #<ActionView::Base:0x82ebb08>) on line #3 of app/views/welcome/test_accordion.html.erb:
+1: <%#
+2: # To change this template, choose Tools | Templates
+3: # and open the template in the editor.
+4: %>
+5: 
+6: <%= netzke :my_accordion, class_name => "AccordionPanel", :items => [{
+
+    app/views/welcome/test_accordion.html.erb:3
+
+Rendered rescues/_trace (88.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#test_accordion (for 127.0.0.1 at 2010-11-07 19:31:28) [GET]
+Rendering template within layouts/application
+Rendering welcome/test_accordion
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'my_accordion') [0m
+  [4;36;1mNetzkePreference Load (1.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'my_accordion' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'my_accordion' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;36;1mNetzkePreference Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `netzke_preferences`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Completed in 31ms (View: 27, DB: 4) | 200 OK [http://localhost/welcome/test_accordion]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#netzke to css (for 127.0.0.1 at 2010-11-07 19:31:29) [GET]
+Completed in 23ms (View: 2, DB: 2) | 200 OK [http://localhost/netzke/netzke.css]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#netzke to js (for 127.0.0.1 at 2010-11-07 19:31:30) [GET]
+Completed in 10ms (View: 1, DB: 0) | 200 OK [http://localhost/netzke/netzke.js]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#my_accordion__load_aggregatee_with_cache (for 127.0.0.1 at 2010-11-07 19:31:37) [POST]
+  Parameters: {"cache"=>"AccordionPanel,", "container"=>"ext-comp-1002", "authenticity_token"=>"zpGzDeKaNLoyK20wSbE3Ly196m7OxSr35jglgb2WnFA=", "id"=>"item0"}
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'my_accordion') [0m
+
+ArgumentError (No class_name specified for aggregatee item0 of my_accordion):
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:459:in `aggregatee_instance'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:453:in `each'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:453:in `aggregatee_instance'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:538:in `load_aggregatee_with_cache'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:138:in `api_load_aggregatee_with_cache'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/app/controllers/netzke_controller.rb:40:in `send'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/app/controllers/netzke_controller.rb:40:in `method_missing'
+
+Rendered rescues/_trace (37.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#my_accordion__load_aggregatee_with_cache (for 127.0.0.1 at 2010-11-07 19:31:39) [POST]
+  Parameters: {"cache"=>"AccordionPanel,", "container"=>"ext-comp-1003", "authenticity_token"=>"zpGzDeKaNLoyK20wSbE3Ly196m7OxSr35jglgb2WnFA=", "id"=>"item1"}
+  [4;36;1mNetzkePreference Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'my_accordion') [0m
+
+NameError (uninitialized constant Netzke::SimplePanel):
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:460:in `aggregatee_instance'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:453:in `each'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:453:in `aggregatee_instance'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:538:in `load_aggregatee_with_cache'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:138:in `api_load_aggregatee_with_cache'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/app/controllers/netzke_controller.rb:40:in `send'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/app/controllers/netzke_controller.rb:40:in `method_missing'
+
+Rendered rescues/_trace (39.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#my_accordion__load_aggregatee_with_cache (for 127.0.0.1 at 2010-11-07 19:31:41) [POST]
+  Parameters: {"cache"=>"AccordionPanel,", "container"=>"ext-comp-1003", "authenticity_token"=>"zpGzDeKaNLoyK20wSbE3Ly196m7OxSr35jglgb2WnFA=", "id"=>"item1"}
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'my_accordion') [0m
+
+NameError (uninitialized constant Netzke::SimplePanel):
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:460:in `aggregatee_instance'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:453:in `each'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:453:in `aggregatee_instance'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:538:in `load_aggregatee_with_cache'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:138:in `api_load_aggregatee_with_cache'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/app/controllers/netzke_controller.rb:40:in `send'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/app/controllers/netzke_controller.rb:40:in `method_missing'
+
+Rendered rescues/_trace (39.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#test_accordion (for 127.0.0.1 at 2010-11-07 19:32:44) [GET]
+Rendering template within layouts/application
+Rendering welcome/test_accordion
+  [4;36;1mNetzkePreference Load (1.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'my_accordion') [0m
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'my_accordion' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'my_accordion' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;35;1mNetzkePreference Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `netzke_preferences`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Completed in 76ms (View: 71, DB: 4) | 200 OK [http://localhost/welcome/test_accordion]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#netzke to css (for 127.0.0.1 at 2010-11-07 19:32:46) [GET]
+Completed in 15ms (View: 1, DB: 0) | 200 OK [http://localhost/netzke/netzke.css]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#netzke to js (for 127.0.0.1 at 2010-11-07 19:32:46) [GET]
+Completed in 11ms (View: 1, DB: 0) | 200 OK [http://localhost/netzke/netzke.js]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#my_accordion__load_aggregatee_with_cache (for 127.0.0.1 at 2010-11-07 19:32:53) [POST]
+  Parameters: {"cache"=>"AccordionPanel,", "container"=>"ext-comp-1002", "authenticity_token"=>"zpGzDeKaNLoyK20wSbE3Ly196m7OxSr35jglgb2WnFA=", "id"=>"item0"}
+  [4;36;1mNetzkePreference Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'my_accordion') [0m
+
+ArgumentError (No class_name specified for aggregatee item0 of my_accordion):
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:459:in `aggregatee_instance'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:453:in `each'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:453:in `aggregatee_instance'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:538:in `load_aggregatee_with_cache'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:138:in `api_load_aggregatee_with_cache'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/app/controllers/netzke_controller.rb:40:in `send'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/app/controllers/netzke_controller.rb:40:in `method_missing'
+
+Rendered rescues/_trace (37.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#my_accordion__load_aggregatee_with_cache (for 127.0.0.1 at 2010-11-07 19:32:55) [POST]
+  Parameters: {"cache"=>"AccordionPanel,", "container"=>"ext-comp-1002", "authenticity_token"=>"zpGzDeKaNLoyK20wSbE3Ly196m7OxSr35jglgb2WnFA=", "id"=>"item0"}
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'my_accordion') [0m
+
+ArgumentError (No class_name specified for aggregatee item0 of my_accordion):
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:459:in `aggregatee_instance'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:453:in `each'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:453:in `aggregatee_instance'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:538:in `load_aggregatee_with_cache'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:138:in `api_load_aggregatee_with_cache'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/app/controllers/netzke_controller.rb:40:in `send'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/app/controllers/netzke_controller.rb:40:in `method_missing'
+
+Rendered rescues/_trace (71.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#test_accordion (for 127.0.0.1 at 2010-11-07 19:37:08) [GET]
+Rendering template within layouts/application
+Rendering welcome/test_accordion
+  [4;36;1mNetzkePreference Load (1.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'my_accordion') [0m
+  [4;35;1mNetzkePreference Load (1.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'my_accordion' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'my_accordion' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;35;1mNetzkePreference Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `netzke_preferences`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Completed in 21ms (View: 15, DB: 5) | 200 OK [http://localhost/welcome/test_accordion]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#netzke to css (for 127.0.0.1 at 2010-11-07 19:37:09) [GET]
+Completed in 20ms (View: 1, DB: 0) | 200 OK [http://localhost/netzke/netzke.css]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#netzke to js (for 127.0.0.1 at 2010-11-07 19:37:10) [GET]
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/netzke/netzke.js]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#my_accordion__load_aggregatee_with_cache (for 127.0.0.1 at 2010-11-07 19:37:20) [POST]
+  Parameters: {"cache"=>"AccordionPanel,", "container"=>"ext-comp-1002", "authenticity_token"=>"zpGzDeKaNLoyK20wSbE3Ly196m7OxSr35jglgb2WnFA=", "id"=>"item0"}
+  [4;36;1mNetzkePreference Load (1.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'my_accordion') [0m
+
+ArgumentError (No class_name specified for aggregatee item0 of my_accordion):
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:459:in `aggregatee_instance'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:453:in `each'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:453:in `aggregatee_instance'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:538:in `load_aggregatee_with_cache'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:138:in `api_load_aggregatee_with_cache'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/app/controllers/netzke_controller.rb:40:in `send'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/app/controllers/netzke_controller.rb:40:in `method_missing'
+
+Rendered rescues/_trace (37.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#test_accordion (for 127.0.0.1 at 2010-11-07 19:38:33) [GET]
+Rendering template within layouts/application
+Rendering welcome/test_accordion
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'my_accordion') [0m
+  [4;36;1mNetzkePreference Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'my_accordion' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'my_accordion' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;36;1mNetzkePreference Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `netzke_preferences`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+Completed in 59ms (View: 21, DB: 3) | 200 OK [http://localhost/welcome/test_accordion]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#netzke to css (for 127.0.0.1 at 2010-11-07 19:38:35) [GET]
+Completed in 12ms (View: 1, DB: 0) | 200 OK [http://localhost/netzke/netzke.css]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#netzke to js (for 127.0.0.1 at 2010-11-07 19:38:36) [GET]
+Completed in 10ms (View: 1, DB: 1) | 200 OK [http://localhost/netzke/netzke.js]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#my_accordion__load_aggregatee_with_cache (for 127.0.0.1 at 2010-11-07 19:38:41) [POST]
+  Parameters: {"cache"=>"AccordionPanel,", "container"=>"ext-comp-1003", "authenticity_token"=>"zpGzDeKaNLoyK20wSbE3Ly196m7OxSr35jglgb2WnFA=", "id"=>"item1"}
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'my_accordion') [0m
+  [4;36;1mNetzkePreference Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'my_accordion__item1') [0m
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'my_accordion__item1' AND `netzke_preferences`.`name` = 'saved_searches') LIMIT 1[0m
+  [4;36;1mNetzkePreference Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'my_accordion__item1' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'my_accordion__item1' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;36;1mNetzkePreference Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `netzke_preferences`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mNetzkeFieldList Load (0.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'my_accordion__item1') LIMIT 1[0m
+Completed in 186ms (View: 1, DB: 3) | 200 OK [http://localhost/netzke/my_accordion__load_aggregatee_with_cache]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#my_accordion__load_aggregatee_with_cache (for 127.0.0.1 at 2010-11-07 19:39:32) [POST]
+  Parameters: {"cache"=>"AccordionPanel,FormPanel,SearchPanel,", "container"=>"ext-comp-1002", "authenticity_token"=>"zpGzDeKaNLoyK20wSbE3Ly196m7OxSr35jglgb2WnFA=", "id"=>"item0"}
+  [4;36;1mNetzkePreference Load (1.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'my_accordion') [0m
+
+ArgumentError (No class_name specified for aggregatee item0 of my_accordion):
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:459:in `aggregatee_instance'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:453:in `each'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:453:in `aggregatee_instance'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:538:in `load_aggregatee_with_cache'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:138:in `api_load_aggregatee_with_cache'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/app/controllers/netzke_controller.rb:40:in `send'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/app/controllers/netzke_controller.rb:40:in `method_missing'
+
+Rendered rescues/_trace (36.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#my_accordion__load_aggregatee_with_cache (for 127.0.0.1 at 2010-11-07 19:39:37) [POST]
+  Parameters: {"cache"=>"AccordionPanel,FormPanel,SearchPanel,", "container"=>"ext-comp-1003", "authenticity_token"=>"zpGzDeKaNLoyK20wSbE3Ly196m7OxSr35jglgb2WnFA=", "id"=>"item1"}
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'my_accordion') [0m
+  [4;36;1mNetzkePreference Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'my_accordion__item1') [0m
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'my_accordion__item1' AND `netzke_preferences`.`name` = 'saved_searches') LIMIT 1[0m
+  [4;36;1mNetzkePreference Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'my_accordion__item1' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'my_accordion__item1' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;36;1mNetzkePreference Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `netzke_preferences`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mNetzkeFieldList Load (0.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'my_accordion__item1') LIMIT 1[0m
+Completed in 83ms (View: 0, DB: 2) | 200 OK [http://localhost/netzke/my_accordion__load_aggregatee_with_cache]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#my_accordion__load_aggregatee_with_cache (for 127.0.0.1 at 2010-11-07 20:40:08) [POST]
+  Parameters: {"cache"=>"AccordionPanel,FormPanel,SearchPanel,", "container"=>"ext-comp-1002", "authenticity_token"=>"zpGzDeKaNLoyK20wSbE3Ly196m7OxSr35jglgb2WnFA=", "id"=>"item0"}
+  [4;36;1mNetzkePreference Load (1.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'my_accordion') [0m
+
+ArgumentError (No class_name specified for aggregatee item0 of my_accordion):
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:459:in `aggregatee_instance'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:453:in `each'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:453:in `aggregatee_instance'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:538:in `load_aggregatee_with_cache'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:138:in `api_load_aggregatee_with_cache'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/app/controllers/netzke_controller.rb:40:in `send'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/app/controllers/netzke_controller.rb:40:in `method_missing'
+
+Rendered rescues/_trace (69.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#my_accordion__load_aggregatee_with_cache (for 127.0.0.1 at 2010-11-07 20:40:11) [POST]
+  Parameters: {"cache"=>"AccordionPanel,FormPanel,SearchPanel,", "container"=>"ext-comp-1002", "authenticity_token"=>"zpGzDeKaNLoyK20wSbE3Ly196m7OxSr35jglgb2WnFA=", "id"=>"item0"}
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'my_accordion') [0m
+
+ArgumentError (No class_name specified for aggregatee item0 of my_accordion):
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:459:in `aggregatee_instance'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:453:in `each'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:453:in `aggregatee_instance'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:538:in `load_aggregatee_with_cache'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:138:in `api_load_aggregatee_with_cache'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/app/controllers/netzke_controller.rb:40:in `send'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/app/controllers/netzke_controller.rb:40:in `method_missing'
+
+Rendered rescues/_trace (36.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#my_accordion__load_aggregatee_with_cache (for 127.0.0.1 at 2010-11-07 20:40:13) [POST]
+  Parameters: {"cache"=>"AccordionPanel,FormPanel,SearchPanel,", "container"=>"ext-comp-1003", "authenticity_token"=>"zpGzDeKaNLoyK20wSbE3Ly196m7OxSr35jglgb2WnFA=", "id"=>"item1"}
+  [4;36;1mNetzkePreference Load (1.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'my_accordion') [0m
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'my_accordion__item1') [0m
+  [4;36;1mNetzkePreference Load (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'my_accordion__item1' AND `netzke_preferences`.`name` = 'saved_searches') LIMIT 1[0m
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'my_accordion__item1' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'my_accordion__item1' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;35;1mNetzkePreference Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `netzke_preferences`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mNetzkeFieldList Load (1.0ms)[0m   [0;1mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'my_accordion__item1') LIMIT 1[0m
+Completed in 113ms (View: 0, DB: 4) | 200 OK [http://localhost/netzke/my_accordion__load_aggregatee_with_cache]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#my_accordion__load_aggregatee_with_cache (for 127.0.0.1 at 2010-11-07 20:41:37) [POST]
+  Parameters: {"cache"=>"AccordionPanel,FormPanel,SearchPanel,", "container"=>"ext-comp-1002", "authenticity_token"=>"zpGzDeKaNLoyK20wSbE3Ly196m7OxSr35jglgb2WnFA=", "id"=>"item0"}
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'my_accordion') [0m
+
+ArgumentError (No class_name specified for aggregatee item0 of my_accordion):
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:459:in `aggregatee_instance'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:453:in `each'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:453:in `aggregatee_instance'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:538:in `load_aggregatee_with_cache'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/netzke/base.rb:138:in `api_load_aggregatee_with_cache'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/app/controllers/netzke_controller.rb:40:in `send'
+  C:/Ruby/lib/ruby/gems/1.8/gems/netzke-core-0.5.4/lib/app/controllers/netzke_controller.rb:40:in `method_missing'
+
+Rendered rescues/_trace (37.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-11-23 00:34:30) [GET]
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mNetzkePreference Load (35.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks') [0m
+  [4;35;1mNetzkeFieldList Load (35.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks') LIMIT 1[0m
+  [4;36;1mNetzkeModelAttrList Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `netzke_field_lists`[0m
+  [4;35;1mNetzkeModelAttrList Load (0.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+  [4;36;1mTask Columns (13.0ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks' AND `netzke_preferences`.`name` = 'menu') LIMIT 1[0m
+  [4;35;1mNetzkePreference Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `netzke_preferences`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mTask Load (1.0ms)[0m   [0;1mSELECT * FROM `tasks` WHERE ((`tasks`.`done` = 0)) LIMIT 0, 25[0m
+Completed in 2451ms (View: 432, DB: 89) | 200 OK [http://localhost/]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#netzke to css (for 127.0.0.1 at 2010-11-23 00:34:34) [GET]
+Completed in 24ms (View: 1, DB: 1) | 200 OK [http://localhost/netzke/netzke.css]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#netzke to js (for 127.0.0.1 at 2010-11-23 00:34:35) [GET]
+Completed in 52ms (View: 1, DB: 0) | 200 OK [http://localhost/netzke/netzke.js]
+  [4;36;1mSQL (27.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (11.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2011-06-28 20:39:44) [GET]
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mNetzkePreference Load (158.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`widget_name` = 'tasks') [0m
+  [4;35;1mNetzkeFieldList Load (36.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'tasks') LIMIT 1[0m
+  [4;36;1mNetzkeModelAttrList Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `netzke_field_lists`[0m
+  [4;35;1mNetzkeModelAttrList Load (9.0ms)[0m   [0mSELECT * FROM `netzke_field_lists` WHERE (`netzke_field_lists`.`name` = 'Task') AND ( (`netzke_field_lists`.`type` = 'NetzkeModelAttrList' ) ) LIMIT 1[0m
+  [4;36;1mTask Columns (42.0ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+  [4;35;1mNetzkePreference Load (0.0ms)[0m   [0mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`name` = 'menu' AND `netzke_preferences`.`widget_name` = 'tasks') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `netzke_preferences` WHERE (`netzke_preferences`.`name` = 'menu' AND `netzke_preferences`.`widget_name` = 'tasks') LIMIT 1[0m
+  [4;35;1mNetzkePreference Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `netzke_preferences`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mTask Load (1.0ms)[0m   [0;1mSELECT * FROM `tasks` WHERE ((`tasks`.`done` = 0)) LIMIT 0, 25[0m
+Completed in 2925ms (View: 625, DB: 302) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#netzke to css (for 127.0.0.1 at 2011-06-28 20:39:48) [GET]
+Completed in 31ms (View: 1, DB: 0) | 200 OK [http://localhost/netzke/netzke.css]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NetzkeController#netzke to js (for 127.0.0.1 at 2011-06-28 20:39:48) [GET]
+Completed in 85ms (View: 1, DB: 0) | 200 OK [http://localhost/netzke/netzke.js]
+/!\ FAILSAFE /!\  Mon Feb 13 23:19:34 -0500 2012
+  Status: 500 Internal Server Error
+  Unknown database 'netzketest_development'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `real_connect'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `connect'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:203:in `initialize'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:75:in `new'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:75:in `mysql_connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    C:/Ruby/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+    C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:159:in `process_client'
+    C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:158:in `each'
+    C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:158:in `process_client'
+    C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `run'
+    C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `initialize'
+    C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `new'
+    C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `run'
+    C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `initialize'
+    C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `new'
+    C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `run'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+    C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    script/server:3
+/!\ FAILSAFE /!\  Mon Feb 13 23:20:12 -0500 2012
+  Status: 500 Internal Server Error
+  Unknown database 'netzketest_development'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `real_connect'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `connect'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:203:in `initialize'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:75:in `new'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:75:in `mysql_connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    C:/Ruby/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+    C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:159:in `process_client'
+    C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:158:in `each'
+    C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:158:in `process_client'
+    C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `run'
+    C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `initialize'
+    C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `new'
+    C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `run'
+    C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `initialize'
+    C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `new'
+    C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `run'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+    C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    script/server:3
+/!\ FAILSAFE /!\  Sun Feb 19 15:20:27 -0500 2012
+  Status: 500 Internal Server Error
+  Unknown database 'netzketest_development'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `real_connect'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:589:in `connect'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:203:in `initialize'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:75:in `new'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:75:in `mysql_connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    C:/Ruby/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+    C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:159:in `process_client'
+    C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:158:in `each'
+    C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:158:in `process_client'
+    C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `run'
+    C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `initialize'
+    C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `new'
+    C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `run'
+    C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `initialize'
+    C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `new'
+    C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `run'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+    C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    script/server:3

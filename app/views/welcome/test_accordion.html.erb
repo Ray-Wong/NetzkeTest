@@ -1,0 +1,15 @@
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+
+<%= netzke :my_accordion, :class_name => "AccordionPanel", :items => [{
+    :html => "I'm a simple Ext.Panel",
+    :title => "Panel One"
+},{
+  :class_name => "SearchPanel",
+  :update_text => "Update for Panel Two",
+  :title => "Panel Two",
+  :lazy_loading => true
+}
+] %>

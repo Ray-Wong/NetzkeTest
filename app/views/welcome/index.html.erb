@@ -1,0 +1,17 @@
+<h1>Incomplete Tasks</h1>
+<%= netzke :tasks, :class_name => "GridPanel",
+           :model => "Task",
+           :columns => [:id, :done, :name,
+              { :name => :notes, :width => 200},
+              { :name => :priority, :width => 50},
+              { :name => :due, :header => "Due on"}
+           ],
+           :ext_config => {
+             :border => true,
+             :header => false,
+             :view_config => {
+               :force_fit => true # force the columns to occupy all the available width
+             },
+             :enable_edit_in_form => false
+           }
+%>
